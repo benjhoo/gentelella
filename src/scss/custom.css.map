@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;EAEE;AAMF;;EAEE;AAIF;;EAEE;AChBF,IAAK;EACH,KAAK,EDUW,OAAO;ECTvB,UAAU,EDUO,OAAO;ECTxB,WAAW,EDAM,yDAAyD;ECC1E,SAAS,EDAM,IAAI;ECCnB,WAAW,EDAM,GAAG;ECCpB,WAAW,EDAW,KAAK",
+"sources": ["_variables.scss","_general.scss"],
+"names": [],
+"file": "custom.css"
+}
