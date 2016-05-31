@@ -1,0 +1,48 @@
+/// Linear Gradient
+/// @param {Color} $startColor - Start Color
+/// @param {Color} $endColor - End Color
+/// @param {Color} $bgColor - Background Color
+
+@mixin background-gradient($startColor, $endColor, $bgColor) {
+  background-color: $bgColor;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $startColor), color-stop(100%, $endColor));
+  background-image: -webkit-linear-gradient($startColor, $endColor);
+  background-image:    -moz-linear-gradient($startColor, $endColor);
+  background-image:     -ms-linear-gradient($startColor, $endColor);
+  background-image:      -o-linear-gradient($startColor, $endColor);
+  background-image:         linear-gradient($startColor, $endColor);
+}
+
+/// Box Sizing
+/// @param {*} $type - Type
+
+@mixin box-sizing($type) {
+  -moz-box-sizing: $type;
+  -webkit-box-sizing: $type;
+  box-sizing: $type;
+}
+
+/// Box Shadow
+/// @param {Shadow} $shadow - Shadow params
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+/// Font Smoothing
+
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/// Border Radius
+/// @param {Size} $radius - Radius
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}

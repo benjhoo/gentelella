@@ -1,0 +1,33 @@
+.container {
+  &.body {
+    .right_col {
+      background: $background-color2;
+    }
+  }
+}
+
+.nav-sm {
+
+  .container {
+    &.body {
+      .right_col {
+        padding: 10px 20px;
+        margin-left: 70px; //TODO: use variable
+        z-index: 2;
+      }
+    }
+  }
+
+}
+
+.nav-md {
+  .container {
+    &.body {
+      .right_col {
+        padding: 10px 20px 0;
+        margin-left: 230px;   //TODO: use variable
+      }
+    }
+  }
+
+}

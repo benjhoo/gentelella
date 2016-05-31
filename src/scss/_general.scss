@@ -1,3 +1,6 @@
+/*
+** GENERAL
+*/
 body {
   color: $font-main-color;
   background: $background-color;
@@ -5,4 +8,113 @@ body {
   font-size: $font-main-size;
   font-weight: $font-main-weight;
   line-height: $font-main-line-height;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+a, a:visited, a:focus, a:active, :visited, :focus, :active {
+  outline: 0;
+}
+a:hover, a:focus {
+  text-decoration: none
+}
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+.clearfix:after, form:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+
+/*
+** STRUCTURE
+*/
+.container {
+  width: 100%;
+  padding: 0;
+}
+
+
+/*
+** COLORS
+*/
+.blue {
+  color: $blue;
+}
+.purple {
+  color: $purple;
+}
+.green {
+  color: $green;
+}
+.aero {
+  color: $aero;
+}
+.red {
+  color: $red;
+}
+.dark {
+  color: $dark;
+}
+.border-blue {
+  border-color: $blue !important;
+}
+.border-purple {
+  border-color: $purple !important;
+}
+.border-green {
+  border-color: $green !important;
+}
+.border-aero {
+  border-color: $aero !important;
+}
+.border-red {
+  border-color: $red !important;
+}
+.border-dark {
+  border-color: $dark !important;
+}
+.bg-white {
+  background: $white !important;
+  border: 1px solid $white !important;
+  color: $font-main-color;
+}
+.bg-green {
+  background: $green !important;
+  border: 1px solid $green !important;
+  color: $white;
+}
+.bg-red {
+  background: $red !important;
+  border: 1px solid $red !important;
+  color: $white;
+}
+.bg-blue {
+  background: $blue !important;
+  border: 1px solid $blue !important;
+  color: $white;
+}
+.bg-orange {
+  background: $orange !important;
+  border: 1px solid $orange !important;
+  color: $white;
+}
+.bg-purple {
+  background: $purple !important;
+  border: 1px solid $purple !important;
+  color: $white;
+}
+.bg-blue-sky {
+  background: $blue-sky !important;
+  border: 1px solid $blue-sky !important;
+  color: $white;
 }
