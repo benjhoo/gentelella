@@ -260,6 +260,46 @@
 }
 
 
+/*
+** SIDEBAR FOOTER
+*/
+.sidebar-footer {
+  bottom: 0;
+  clear: both;
+  display: block;
+  padding: 5px 0 0 0;
+  position: fixed;
+  width: 230px;   //TODO: use variable
+  z-index: 1000;
+  background: $sidebar-footer-background-color;
+
+  a {
+    padding: 7px 0 3px;
+    text-align: center;
+    width: 25%;
+    font-size: 17px;
+    display: block;
+    float: left;
+    background:$sidebar-footer-background-color;
+
+    &:hover {
+      cursor: pointer;
+      background: $sidebar-footer-background-hover;
+    }
+  }
+}
+
+
+
+.sidebar-header {
+  border-bottom: 0;
+  margin-top: 46px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
 
 /*
 ** NAV-SM SIDEBAR
@@ -452,5 +492,19 @@
       }
     }
   }
+}
 
+
+@media (max-width: 991px) { //TODO: use Media Queries Mixins
+  .nav-md {
+    .container {
+      &.body {
+        .col-md-3 {
+          &.left_col {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }

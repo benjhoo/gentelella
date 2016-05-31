@@ -6,8 +6,11 @@
   }
 }
 
-.nav-sm {
+/*
+** NAV-SM RIGHT COL
+*/
 
+.nav-sm {
   .container {
     &.body {
       .right_col {
@@ -17,8 +20,12 @@
       }
     }
   }
-
 }
+
+
+/*
+** NAV-MD RIGHT COL
+*/
 
 .nav-md {
   .container {
@@ -29,5 +36,23 @@
       }
     }
   }
+}
 
+
+@media (max-width: 991px) { //TODO: use Media Queries Mixins
+  .right_col {
+    padding: 10px !important;
+  }
+
+  .nav-md {
+    .container {
+      &.body {
+        .right_col {
+          width: 100%;
+          margin: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
 }
