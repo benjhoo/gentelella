@@ -1,0 +1,33 @@
+.input-group {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  @include border-radius(0);
+  width: 100%;
+}
+
+.top_search {
+  padding: 0;
+
+  .form-control {
+    border: 1px solid rgba(221,226,232,0.49);
+    @include box-shadow(inset 0 1px 0px rgba(0, 0, 0, 0.075));
+    @include border-radius(25px 0px 0px 25px);
+    padding-left: 20px;
+
+    &:focus {
+      border: 1px solid rgba(221,226,232, 0.49);
+      border-right: 0;
+    }
+  }
+
+  .input-group-btn button {
+    border: 1px solid rgba(221, 226, 232, 0.49);
+    border-left: 0;
+    @include border-radius(0px 25px 25px 0px);
+    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+    margin-bottom: 0 !important;
+    color: #93A2B2;
+  }
+}

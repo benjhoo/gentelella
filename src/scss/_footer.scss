@@ -1,0 +1,17 @@
+footer {
+  background: $footer-background-color;
+  padding: 15px 20px;
+  display: block;
+}
+
+.nav-sm {
+  footer {
+    margin-left: 70px; //TODO: use variable
+  }
+}
+
+@media (min-width: 768px) { //TODO: use Media Queries Mixins
+  footer {
+    margin-left: 230px; //TODO: use variable
+  }
+}

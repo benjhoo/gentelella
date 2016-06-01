@@ -13,6 +13,10 @@ h1, .h1, h2, .h2, h3, .h3 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
 a {
   color: $link-color;
   text-decoration: none;
@@ -33,6 +37,20 @@ a:hover, a:focus {
   clear: both;
   visibility: hidden;
 }
+.no-padding {
+  padding: 0 !important;
+}
+#left, #right {
+  display: table;
+}
+#sup {
+  display: table-cell;
+  vertical-align: middle;
+  width: 80%;
+}
+.overflow_hidden {
+  overflow: hidden
+}
 
 
 /*
@@ -41,6 +59,25 @@ a:hover, a:focus {
 .container {
   width: 100%;
   padding: 0;
+}
+.main_content {
+  padding: 10px 20px;
+}
+.col-md-55 {
+  width: 50%;
+  margin-bottom: 10px;
+}
+.fixed_height_320 {
+  height: 320px;
+}
+.fixed_height_390 {
+  height: 390px;
+}
+.fixed_height_200 {
+  height: 200px;
+}
+.line_30 {
+  line-height: 30px;
 }
 
 

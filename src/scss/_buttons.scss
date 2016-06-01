@@ -1,0 +1,8 @@
+.btn {
+  @include border-radius(3px);
+}
+
+.buttons, button, .btn {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}

@@ -46,3 +46,23 @@
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
+
+/// Column Break Inside
+/// @param {Type} $value - Type
+
+@mixin column-break-inside($value) {
+  -webkit-column-break-inside: $value;
+  -moz-column-break-inside: $value;
+  column-break-inside: $value;
+}
+
+/// Transition
+/// @param {List} $properties - Properties
+
+@mixin transition($properties...) {
+  -moz-transition: $properties;
+  -o-transition: $properties;
+  -webkit-transition: $properties;
+  -ms-transition: $properties;
+  transition: $properties;
+}
