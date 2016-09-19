@@ -1,4 +1,39 @@
 /**
+ * Resize function without multiple trigger
+ * 
+ * Usage:
+ * $(window).smartresize(function(){  
+ *     // code here
+ * });
+ */
+(function($,sr){
+    // debouncing function from John Hann
+    // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+    var debounce = function (func, threshold, execAsap) {
+      var timeout;
+
+        return function debounced () {
+            var obj = this, args = arguments;
+            function delayed () {
+                if (!execAsap)
+                    func.apply(obj, args); 
+                timeout = null; 
+            }
+
+            if (timeout)
+                clearTimeout(timeout);
+            else if (execAsap)
+                func.apply(obj, args);
+
+            timeout = setTimeout(delayed, threshold || 100); 
+        };
+    };
+
+    // smartresize 
+    jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+})(jQuery,'smartresize');
+/**
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -22,7 +57,7 @@ $(document).ready(function() {
         $RIGHT_COL.css('min-height', $(window).height());
 
         var bodyHeight = $BODY.outerHeight(),
-            footerHeight = $BODY.hasClass('footer_fixed') ? 0 : $FOOTER.height(),
+            footerHeight = $BODY.hasClass('footer_fixed') ? -10 : $FOOTER.height(),
             leftColHeight = $LEFT_COL.eq(1).height() + $SIDEBAR_FOOTER.height(),
             contentHeight = bodyHeight < leftColHeight ? leftColHeight : bodyHeight;
 
@@ -242,38 +277,3 @@ if (typeof NProgress != 'undefined') {
         NProgress.done();
     });
 }
-/**
- * Resize function without multiple trigger
- * 
- * Usage:
- * $(window).smartresize(function(){  
- *     // code here
- * });
- */
-(function($,sr){
-    // debouncing function from John Hann
-    // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-    var debounce = function (func, threshold, execAsap) {
-      var timeout;
-
-        return function debounced () {
-            var obj = this, args = arguments;
-            function delayed () {
-                if (!execAsap)
-                    func.apply(obj, args);
-                timeout = null; 
-            }
-
-            if (timeout)
-                clearTimeout(timeout);
-            else if (execAsap)
-                func.apply(obj, args);
-
-            timeout = setTimeout(delayed, threshold || 100); 
-        };
-    };
-
-    // smartresize 
-    jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
-
-})(jQuery,'smartresize');

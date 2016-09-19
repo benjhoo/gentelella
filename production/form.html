@@ -13,6 +13,8 @@
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- bootstrap-wysiwyg -->
@@ -179,7 +181,7 @@
         <!-- top navigation -->
         <div class="top_nav">
           <div class="nav_menu">
-            <nav class="" role="navigation">
+            <nav>
               <div class="nav toggle">
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
               </div>
@@ -624,8 +626,7 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">AutoComplete</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" name="country" id="autocomplete-custom-append" class="form-control col-md-10" style="float: left;" />
-                          <div id="autocomplete-container" style="position: relative; float: left; width: 400px; margin: 10px;"></div>
+                          <input type="text" name="country" id="autocomplete-custom-append" class="form-control col-md-10"/>
                         </div>
                       </div>
                       <div class="form-group">
@@ -1286,7 +1287,7 @@
 
                 <h4>Inline Form </h4>
                 <p class="font-gray-dark">
-                  For making labels vertical you have two options, either use the apropiate grid <b>.col-</b> class or wrap the form in the <b>form-vertical</b> class.
+                  Add .form-inline to your form (which doesn't have to be a <form>) for left-aligned and inline-block controls.
                 </p>
                 <form class="form-inline">
                   <div class="form-group">
@@ -1544,8 +1545,7 @@
 
         // initialize autocomplete with custom appendTo
         $('#autocomplete-custom-append').autocomplete({
-          lookup: countriesArray,
-          appendTo: '#autocomplete-container'
+          lookup: countriesArray
         });
       });
     </script>
